@@ -11,15 +11,23 @@ Resources:
     Type: AWS::IAM::User
     Properties:
       UserName: !Sub "${AWS::StackName}-user1"
+      Groups:
+        - !Ref IAMGroup
   IAMUser2:
     Type: AWS::IAM::User
     Properties:
       UserName: !Sub "${AWS::StackName}-user2"
+      Groups:
+        - !Ref IAMGroup
   IAMUser3:
     Type: AWS::IAM::User
     Properties:
       UserName: !Sub "${AWS::StackName}-user3"
+      Groups:
+        - !Ref IAMGroup
   IAMUser4:
     Type: AWS::IAM::User
     Properties:
       UserName: !Sub "${AWS::StackName}-user4"
+      Groups:
+        - !Ref IAMGroup
